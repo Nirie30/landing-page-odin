@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
-
 *,
 *::before,
 *::after {
@@ -13,54 +11,53 @@ body {
 
 .header {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.9);      
-    display: flex;      
-    outline: 5px solid orange;    
-}
-
-.logo {
+    border: 1px solid red;    
+    background-color: rgba(0, 0, 0, 0.9);        
     display: flex;
-    outline: 1px solid red; 
-    flex: 1;
-    align-items: center;
-    color: azure;    
-    text-transform: uppercase;   
-    margin: 0 1%;    
-    gap: 0.5em;        
+    justify-content: space-between;
+    outline: 2px solid gold;    
+    padding: 0.5% 5% 0 5%;       
+    left: 0;
+    right: 0;
 }
 
-.logo-img {      
+.logo-img {                 
+    border: 1px solid yellow;   
+    width: 4%;    
+    min-width: 50px;     
+    margin-left: 5%; 
+}
+
+.links {         
     display: flex;
-    flex-wrap: wrap;
-    border: 1px solid yellow;       
-    width: 15%;    
-    min-width: 40px;    
-}
-
-.title {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid yellow;       
-    font-size: small;   
-    text-align: center; 
-    font-weight: 700;       
-}
-
-
-.links {      
-    outline: 1px solid pink; 
-    display: flex;     
-    flex-wrap: wrap;
-    flex: 4;    
-    justify-content: flex-end;   
-    gap: 3em;
-    list-style: none;   
-    margin: 0 1%;     
+    flex-wrap: wrap;    
+    outline: 1px solid pink;        
+    gap: 2em;
+    list-style: none;       
+    padding: 0;
 }
 
 .list-item {        
     outline: 1px solid goldenrod; 
     color: azure;
-    text-decoration: none;             
+    text-decoration: none;               
+}
+
+.container-description {    
+   display: flex;        
+   background-image: url(/img/background_description.jpg);  
+   background-repeat: no-repeat;
+   background-size: 100%;   
+   justify-content: center;
+   align-items: center;  
+} 
+
+/* Need to style text and button here for next session */
+.description {
+   background-color: azure;
+   text-align: center;  
+   margin: 5%;
+   padding: 2%;
+   border-radius: 25px;
+   
 }
