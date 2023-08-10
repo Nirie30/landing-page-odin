@@ -8,32 +8,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <div class="left">
-            <img class="logo-img" src="./img/Tank-icon.png" alt="shield icon">        
-        </div>
-        <div class="right">      
-            <ul class="links">
-                <li><a class="list-item" href="#">Guides</a></li>
-                <li><a class="list-item" href="#">Mythic +</a></li>
-                <li><a class="list-item" href="#">Raid</a></li>
-                <li><a class="list-item" href="#">Resources</a></li>              
-            </ul>         
-        </div>
+    <header >
+        <nav class="header">
+            <div>
+                <img class="logo-img" src="./img/Tank-icon.png" alt="shield icon">        
+            </div>
+            <div>      
+                <ul class="links">
+                    <li><a class="list-item" href="#">Guides</a></li>
+                    <li><a class="list-item" href="#">Mythic +</a></li>
+                    <li><a class="list-item" href="#">Raid</a></li>
+                    <li><a class="list-item" href="#">Resources</a></li>              
+                </ul>         
+            </div>            
+        </nav>
     </header>
     <main>
         <!-- Intro Section -->
         <section>     
             <div class="container-description">     
                 <div class="description">            
-                    <h1>Tank Buddy</h1>
+                    <h1 class="title">Tank Buddy</h1>
                     <p>Tank guides for World of Warcraft with all the core details for each encounter.</p>
                     <button type="submit">Sign Up</button>
                 </div>        
             </div>       
-        </section>
-        
+        </section>        
         <!-- Guides Section -->
+        <section>
+            <div class="container-guides">               
+                <div class="tank-imgs">                    
+                    <a class="link-class" href="#"><img class="tank-class" src="/img/bdk.png" alt="blood dk icon"></a>      
+                    <a class="link-class" href="#"><img class="tank-class" src="/img/bear.png" alt="guardian druid icon"></a> 
+                    <a class="link-class" href="#"><img class="tank-class" src="/img/bmmonk.png" alt="brewmaster monk icon"></a> 
+                    <a class="link-class" href="#"><img class="tank-class" src="/img/protpala.png" alt="protection paladin icon"></a> 
+                    <a class="link-class" href="#"><img class="tank-class" src="img/protwar.png" alt="protection warrior icon"></a> 
+                    <a class="link-class" href="#"><img class="tank-class" src="img/vdh.png" alt="vengeance demon hunter icon"></a>   
+                </div>
+                <div class="title-guides">    
+                    <h2>Guides</h2>                
+                </div>
+            </div>
+        </section>
 
     </main>
 
