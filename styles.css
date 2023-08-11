@@ -55,8 +55,7 @@ body {
    justify-content: center;   
    align-items: center;   
    background-position: center;
-   border-bottom: 2px solid #859084;   
-   padding-top: 7em;
+   border-bottom: 2px solid #859084;      
 } 
 
 .description {
@@ -84,6 +83,7 @@ button {
     padding: 2% 4%;
     width: 40%;
     margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 button:hover {
@@ -156,7 +156,7 @@ button:hover {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    border: #030203;
+    border-bottom: 3px solid #030203;   
     width: 100%;
     padding-top: 2em;
   }
@@ -230,7 +230,7 @@ button:hover {
 }
 
 .uld {
-left: 8%;
+    left: 8%;
 }
 
 .ur {
@@ -245,4 +245,84 @@ left: 8%;
     visibility: visible;
     opacity: 1;
    
+}
+
+/* Raid */
+
+.container-raid {    
+    background-color: #b5bbb4;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    border-bottom: 3px solid #030203;       
+}
+
+.raid-imgs {    
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-evenly;
+    align-items: center;      
+    gap: 1em;
+    margin: 0 0.7em;
+}
+
+figure {   
+    display: table;     
+}
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;    
+    background-color: rgba(3, 2, 3,0.5);
+    padding: 5%;    
+    border-radius: 0 0 25px 25px;
+}
+
+.boss-img {    
+    height: 150px;
+    object-fit:cover;
+    width: 240px;
+    padding: 0;
+    margin: 0;
+    object-position: top;
+    border-radius: 25px 25px 0 0;
+    filter:sepia(150%);  
+}
+
+.link-boss {    
+    display: flex;
+    flex-direction: column;
+    color:#b5bbb4 ;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;  
+    outline: 2px solid #030203;
+    border-radius: 25px;   
+}
+
+.title-raid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;   
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    padding: 1.5em ;
+    text-align: center;
+}
+
+.link-boss:hover {
+    transition: 0.4s all ease-in-out;  
+    transform: scale(1.2);         
+}
+ 
+figcaption:hover {    
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #030203;
+    font-weight: 800;   
+    filter: sepia(0%);  
+}
+
+.boss-img:hover {
+    filter: sepia(0%);  
 }
