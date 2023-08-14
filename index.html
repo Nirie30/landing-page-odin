@@ -11,11 +11,11 @@
     <header >
         <nav class="header">
             <div>
-                <img class="logo-img" src="./img/Tank-icon.png" alt="shield icon">        
+                <a class="home" href="#"><img class="logo-img" src="./img/Tank-icon.png" alt="shield icon"></a>
             </div>
             <div>      
                 <ul class="links">
-                    <li><a class="list-item" href="#">Guides</a></li>
+                    <li><a class="list-item pointer" href="#">Guides</a></li>
                     <li><a class="list-item" href="#">Mythic +</a></li>
                     <li><a class="list-item" href="#">Raid</a></li>
                     <li><a class="list-item" href="#">Resources</a></li>              
@@ -95,72 +95,61 @@
         <!-- Raid Section -->
         <section>
             <div class="container-raid">
-                <div class="raid-imgs">                    
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/kazzara.png" alt="Kazzarra icon">
-                            <figcaption>Kazzara, the Hellforged</figcaption>  
-                        </a>
-                    </figure>
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/amalgamation1.jpg" alt="Kazzarra icon">
-                            <figcaption>Amalgamation Chamber</figcaption>  
-                        </a>    
-                    </figure>
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/experiments.png" alt="Kazzarra icon">
-                            <figcaption>Forgotten Experiments</figcaption>  
-                        </a>
-                    </figure>
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/rashok.jpg" alt="Kazzarra icon">
-                            <figcaption>Rashok</figcaption> 
-                        </a>
-                    </figure>
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/zaqali.png" alt="Kazzarra icon">
-                            <figcaption>Assault of the Zaqali</figcaption>  
-                        </a>
-                    </figure>
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/zskarn.jpg" alt="Kazzarra icon">
-                            <figcaption>Zskarn</figcaption>  
-                        </a>
-                    </figure>                           
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/magmorax.jpg" alt="Kazzarra icon">
-                            <figcaption>Magmorax</figcaption>  
-                        </a>
-                    </figure>
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/echo.jpg" alt="Kazzarra icon">
-                            <figcaption>Echo of Neltharion</figcaption>  
-                        </a>
-                    </figure>
-                    <figure>
-                        <a class="link-boss" href="#">
-                            <img class="boss-img" src="/img/sarkareth.jpg" alt="Kazzarra icon">
-                            <figcaption>Sarkareth</figcaption>  
-                        </a>
-                    </figure>                                      
-                </div>
                 <div class="title-raid">
                     <h2>Aberrus, the Shadowed Crucible</h2>
                 </div>
-            </div>            
+                <div class="wrapper-boxes">
+                    <div class="box-one">
+                        <div class="boss-one">          
+                            <a class="link-boss" href="#"><h3>Kazzara, the Hellforged</h3></a>   
+                        </div>
+                        <div class="boss-two">
+                            <a class="link-boss" href="#"><h3>The Amalgamation Chamber</h3></a>
+                        </div>               
+                    </div>
+                    <div class="box-two">
+                        <div class="box-three">
+                            <div class="boss-three">
+                                <a class="link-boss" href="#"><h3>The Forgotten Experiments</h3></a>  
+                            </div>
+                            <div class="boss-four">
+                                <a class="link-boss" href="#"><h3>Assault of the Zaqali</h3></a>  
+                            </div>
+                        </div>
+                        <div class="box-four">
+                            <div class="box-five">
+                                <div class="box-seven">
+                                    <div class="boss-five">
+                                        <a class="link-boss" href="#"><h3>Rashok the Elder</h3></a>  
+                                    </div>
+                                    <div class="boss-six">
+                                        <a class="link-boss" href="#"><h3>The Vigilant Steward, Zskarn</h3></a>  
+                                    </div>
+                                </div>
+                                <div class="box-eight">
+                                    <div class="boss-seven">
+                                        <a class="link-boss" href="#"><h3>Magmorax</h3></a>  
+                                    </div>
+                                    <div class="boss-eight">
+                                        <a class="link-boss" href="#"><h3>Echo of Neltharion</h3></a>  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box-six">
+                                <div class="boss-nine">
+                                    <a class="link-boss" href="#"><h3>Scalecommander Sarkareth</h3></a>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
         </section>
         <!-- Quote Section -->
         <section>
             <div class="container-quote-section">
                 <video autoplay muted loop class="container-video">
-                    <source src="/video/mythic_dungeon_international youtube trailer.mp4" type="video/mp4" poster>
+                    <source src="/video/mythic_dungeon_international_youtube_trailer.mp4" type="video/mp4">
                 </video>                
                 <div class="container-quote">
                     <h2><em>You are the only thing between the group and death right now.</em></h2>
@@ -170,36 +159,40 @@
         </section>
         <!-- Resources Section -->
         <section class="resources-section">            
-            <div class="container-resources">                
-                <div class="block-one">
-                    <div class="resource-one">
-                        <p class="resource-title">Affixes Comps Comms</p>
-                    </div>
+            <div class="container-resources">
+                <div class="title-resources-section">
+                    <h2>Resources</h2>
                 </div>
-                <div class="block-two">
-                    <div class="resource-two">
-                        <!-- <img class="resource-img" src="/img/addons.jpg" alt="addon enabling interface"> -->
-                        <p class="resource-title">Addons Weakauras Routes</p>                        
-                    </div>                
-                    <div class="resource-three">
-                        <p class="resource-title">Raiderio Wowhead Subcreation</p>
-                    </div>                    
-                    <div class="resource-four">
-                        <p class="resource-title">Discords Youtubers Streamers</p>
+                <div class="wrapper-resources">                  
+                    <div class="block-one">
+                        <div class="resource-one">
+                            <p class="resource-title">Affixes Comps Comms</p>
+                        </div>
                     </div>
-                </div>
-                <div class="block-three">
-                    <div class="resource-five">
-                        <p class="resource-title">Warcraft Logs WoWAnalyzer</p>
-                    </div>                   
-                    <div class="resource-six">
-                        <p class="resource-title">Credits / Sources</p>
+                    <div class="block-two">
+                        <div class="resource-two">
+                            <!-- <img class="resource-img" src="/img/addons.jpg" alt="addon enabling interface"> -->
+                            <p class="resource-title">Addons Weakauras Routes</p>                        
+                        </div>                
+                        <div class="resource-three">
+                            <p class="resource-title">Raiderio Wowhead Subcreation</p>
+                        </div>                    
+                        <div class="resource-four">
+                            <p class="resource-title">Discords Youtubers Streamers</p>
+                        </div>
+                    </div>
+                    <div class="block-three">
+                        <div class="resource-five">
+                            <p class="resource-title">Warcraft Logs WoWAnalyzer</p>
+                        </div>                   
+                        <div class="resource-six">
+                            <p class="resource-title">Credits / Sources</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
     <footer>
 
     </footer>

@@ -1,20 +1,32 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box;  
+    
+    
 }
 
 body {
+    cursor: url(/cursor/auto.webp) , auto;    
     font-family: Ubuntu, 'Open Sans', sans-serif;
     margin: 0;
+    
 }
 
-div > h2,
-div > h1, figcaption {
+a, button {
+    cursor: url(cursor/link.webp), pointer;
+}
+
+.home {
+    cursor: url(cursor/home.webp), pointer;
+}
+
+
+h2,h1,figcaption {
     font-weight: 350;
 }
 
-div > h3 {
+h3 {
     font-weight: 400;
 }
 /* Nav */
@@ -115,7 +127,7 @@ button:hover {
     flex-wrap:wrap;
     gap:3em;
     justify-content:space-evenly;
-    margin: 2em;    
+    margin: 2em 3em;       
 }
 
 .tank-class {
@@ -255,87 +267,140 @@ button:hover {
 }
 
 /* Raid */
-
 .container-raid {
-    background-color: #17150b;  
-    border-bottom: 2px solid #859084; 
     display: flex;
-    flex-direction: column-reverse;    
-    padding: 1.5em;
-    width: 100%;
+    background-color:#1f1f16;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+
+.wrapper-boxes {    
+    display: flex; 
+    margin: 2em;
+    height: 500px;
+    width: 90%;  
+}
+.box-one {
+    outline: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    flex: 1;           
+}
+
+.box-two {
+    outline: 1px solid rebeccapurple;
+    display: flex;
+    flex-direction: column;   
+    flex: 3;  
+}
+
+.box-three {
+    /* outline: 10px solid yellow; */
+    display: flex;
+    flex: 1;
+  
     
 }
 
-.raid-imgs {    
-    align-items: center; 
-    display: flex;
-    flex-wrap: wrap;    
-    gap: 1em;
-    justify-content: space-evenly;
-    margin: 0 0.7em;            
+.box-four {
+    /* outline: 5px solid greenyellow; */
+    display: flex; 
+    flex: 3;
+    
 }
 
-figure {   
-    display: table;     
-}
-
-figcaption {
-    background-color: rgba(3, 2, 3,0.5);
-    border-radius: 0 0 25px 25px;
-    caption-side: bottom; 
-    display: table-caption;
-    padding: 5%;    
-    text-transform: uppercase;
-}
-
-.boss-img {    
-    border-radius: 25px 25px 0 0;
-    filter:sepia(150%);  
-    height: 150px;
-    margin: 0;
-    object-fit:cover;
-    object-position: top;
-    width: 240px;
-    padding: 0;
-}
-
-.link-boss {    
-    border-radius: 25px;
-    color:#b5bbb4 ;
-    display: flex;
-    flex-direction: column;    
-    font-weight: 500; 
-    outline: 2px solid #030203;
-    text-align: center;
-    text-decoration: none;
-}
-
-.title-raid {
-    align-items: center;
-    color: #c1bba8;;
+.box-five {
+    outline: 2px solid blue;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;       
+    flex: 3; 
+    align-items: stretch;  
+}
+
+.box-six {
+    /* outline: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+   flex:1;
+}
+
+.box-seven {
+    /* outline: 10px solid red; */
+    display: flex;
+    flex: 1;
+
+}
+
+.box-eight {
+    display: flex;
+    flex: 1;
+   
+}
+div[class^="boss-"] {
+    background-size: cover;
+    display: flex;    
     justify-content: center;
-    padding: 1.5em ;
-    text-transform: uppercase;    
-    text-align: center;    
+    align-items: center;
+    flex: 1;
+}    
+
+.boss-one {    
+    background-image: url(img/kazzara.png);
+    background-position: center;    
 }
 
-.link-boss:hover {
-    transform: scale(1.2);         
-    transition: 0.4s all ease-in-out;
-}
- 
-figcaption:hover {    
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #030203;
-    font-weight: 800;   
-    filter: sepia(0%);  
+.boss-two {    
+    background-image: url(img/amalgamation1.jpg);
+    background-position: center;
 }
 
-.boss-img:hover {
-    filter: sepia(0%);  
+.boss-three {    
+    background-image: url(img/experiments.png);
+    background-position-y: 10%;
+}
+
+.boss-four {    
+    background-image: url(img/zaqali.png);
+    background-position-y: 15%;    
+}
+
+.boss-five {
+    background-image: url(img/rashok.jpg);
+    background-position: center;
+}
+
+.boss-six {
+    background-image: url(img/zskarn.jpg);
+    background-position-y: 10%;    
+}
+
+.boss-seven {
+    background-image: url(img/magmorax.jpg);
+    background-position: center;
+}
+
+.boss-eight {
+    background-image: url(img/echo.jpg);
+    background-position-y: 15%;
+   
+}
+
+.boss-nine {
+    background-image: url(img/sarkareth.jpg);    
+    background-position: center;
+    
+}
+
+.link-boss {      
+    text-decoration: none;
+    color: gray;
+    text-align: center;
+}
+
+div[class^="boss-"]:hover {
+    transform: scale(1.1);
+    transition: .2s all ease-in-out;
 }
 
 /* Quote */
@@ -371,29 +436,41 @@ figcaption:hover {
 
 .resources-section {
     background-color: #222525;
-    padding: 2em;
+    padding: 1.5em;
 }
-.container-resources {     
+.container-resources {   
     display: flex;
-    flex-direction: column;       
-    overflow: hidden;
+    flex-direction: column;
+}
+
+.wrapper-resources {
+    display: flex;    
+    flex-direction: column;
+    height: 750px;
 }
 
 div[class^="block-"] {
-    display: flex;         
-    object-fit: cover;
+    display: flex;
 }
 
-.block-two {    
-    height: 400px;      
+.block-one {
+    flex: 1 ;
+}
+
+.block-two {
+    flex: 3;
+}
+
+.block-three {
+    flex: 1;
 }
 
 div[class^="resource-"] { 
     align-items: center;
-    background-size: cover;
+    background-size: cover;    
     border-radius: 25px;
     display: flex;         
-    filter: grayscale(80%);   
+    filter: grayscale(45%);   
     justify-content: center;
     margin: 1%;
     outline: 2px solid #030203; 
@@ -407,27 +484,29 @@ div[class^="resource-"] {
 
 .resource-two {    
     background-image: url(/img/route.jpg);      
-    flex-basis: 25%;    
+    background-position: 5%;
+    flex: 1;    
 }
 
 .resource-three {    
     background-image: url(/img/raiderio.jpg);
-    flex-basis: 50%;
+    flex: 2;
+    background-position: center 20% ;    
 }
 
 .resource-four {    
     background-image: url(/img/yt_tw.jpg);
-    flex-basis: 25%;     
+    flex: 1;   
 }
 
 .resource-five {    
     background-image: url(/img/logs.jpg);  
-    flex-basis: 50%;    
+    flex: 1;    
  }
 
  .resource-six {    
     background-image: url(/img/sources.jpg);   
-    flex-basis: 50%;    
+    flex: 1;
  } 
 
  .resource-title {    
@@ -446,23 +525,32 @@ div[class^="resource-"] {
  }
 
  @media (max-width: 600px) {
-    .block-one {
-        flex-basis: 33.33%; 
-        height: 100px;
+
+    .wrapper-resources {
+        height: 600px;
+    }
+    div[class^="block-"] {
+        flex-direction: column;
+        flex: 1;
     }
 
-    .block-two{
-      flex-basis: 35%; 
-      flex-direction: column;      
-    }
-    
-    .block-three {
-        flex-basis: 35%; 
-        flex-direction: column;        
-    }
-    
     .resource-title {
         font-size: 3vw;
     }
 }
 
+.title-resources-section {
+    align-items: center;
+    color: #c1bba8;;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;       
+    justify-content: center;
+    padding: 1.5em ;
+    text-transform: uppercase;    
+    text-align: center;    
+}
+
+
+/* Create footer - rezise video to be less than 50mb without losing quality - 
+- fix syntax of figcaption - add section botton to go up and down - add navigation menu for phone*/
