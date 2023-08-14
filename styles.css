@@ -1,16 +1,14 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;  
-    
-    
+    box-sizing: border-box;
 }
 
 body {
     cursor: url(/cursor/auto.webp) , auto;    
     font-family: Ubuntu, 'Open Sans', sans-serif;
     margin: 0;
-    
+    padding: 0;      
 }
 
 a, button {
@@ -21,6 +19,7 @@ a, button {
     cursor: url(cursor/home.webp), pointer;
 }
 
+/* Grouping selectors */
 
 h2,h1,figcaption {
     font-weight: 350;
@@ -29,16 +28,37 @@ h2,h1,figcaption {
 h3 {
     font-weight: 400;
 }
+
+.title, div[class^="title-"], .list-item, .resource-title {
+    text-transform: uppercase;
+    color: #c1bba8;
+}
+
+.header, div[class^="container-"] {
+    border-bottom: 2px solid #859084;
+    display: flex;
+}
+
+.header, .container-description, .description, .tank-imgs, .title-guides, .link-class, .container-plus, .dungeon-imgs, 
+.container-raid, .container-quote-section, .title-resources-section, .link-boss {
+    align-items: center;
+}
+
+.container-description, .description, .tank-class, .title-guides, .container-plus, .container-raid, .link-boss, 
+.container-quote-section, .title-resources-section{
+    justify-content: center;    
+}
+
+.description, .wrapper-quote, .resource-title, .title-resources-section {
+    text-align: center;   
+}
+
 /* Nav */
 
 .header {
-    align-items: center;    
-    background-color: #030203;        
-    border-bottom: 2px solid #859084;   
-    display: flex;    
+    background-color: #030203;
     justify-content: space-between;     
-    padding: 0.5em 2.5em; 
-    width: 100%;       
+    padding: 0.5em 2.5em;   
 }
 
 .logo-img {                   
@@ -56,45 +76,34 @@ h3 {
     padding: 0;
 }
 
+.list-item {   
+    text-decoration: none;               
+}
+
 .list-item:hover {
     font-weight: 500;
     text-decoration: underline;
-}
-.list-item {       
-    color:  #c1bba8;  ;
-    text-decoration: none;               
 }
 
 /* Description */
 
 .container-description {    
-   align-items: center;   
    background-image: url(/img/background_description.jpg);  
    background-position: center;
    background-repeat: no-repeat;
-   background-size: cover;   
-   border-bottom: 2px solid #859084;
-   display: flex;  
-   flex-wrap: wrap;   
-   justify-content: center;        
+   background-size: cover;    
+   flex-wrap: wrap;  
 } 
 
 .description {
-   align-items: center;
    background-color: rgba(3, 2, 3,0.85);
    border-radius: 25px;
    color: #c1bba8;
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
-   justify-content: center;  
    margin: 3em 5em 3em 5em;
    padding: 2% 4%;
-   text-align: center;   
-}
-
-.title {
-    text-transform: uppercase;
 }
 
 button {
@@ -115,39 +124,29 @@ button:hover {
 
 .container-guides {
     background-color: #030203;
-    border-bottom: 2px solid #859084; 
-    display: flex;
-    width: 100%;          
 }
 
 .tank-imgs {
-    align-items: center;
     display: flex;
     flex: 3;
     flex-wrap:wrap;
-    gap:3em;
+    gap: 2em;
     justify-content:space-evenly;
     margin: 2em 3em;       
 }
 
 .tank-class {
     border-radius: 100px;
-    justify-content: center;  
     width: 100px;    
 }
 
 .title-guides {
-    align-items: center;
-    color: #c1bba8;
     display: flex;
     flex: 1;
-    justify-content: center;
-    padding: 1em 2em 0 2em;
-    text-transform: uppercase;    
+    padding: 1em 2em 0 2em;     
 }
 
 .link-class {
-    align-items: center;
     display: flex;
     flex-wrap: wrap; 
     justify-content:center;
@@ -171,18 +170,13 @@ button:hover {
   /* Mythic Plus */
 
   .container-plus {
-    align-items: center;
     background-color: #222525;
-    border-bottom: 2px solid #859084; 
-    display: flex;
     flex-direction: column-reverse;    
-    justify-content: center;
     padding: 1em 0.5em;  
     width: 100%;
   }
 
   .dungeon-imgs {
-    align-items: center;
     display: flex;
     flex: 3;
     flex-wrap: wrap;
@@ -197,11 +191,6 @@ button:hover {
     height: 125px;
     padding: 0;
     width: 250px;
-  }
-
-  .title-plus {
-    color: #c1bba8;    
-    text-transform: uppercase;
   }
 
 .dungeon:hover {
@@ -267,12 +256,10 @@ button:hover {
 }
 
 /* Raid */
+
 .container-raid {
-    display: flex;
     background-color:#1f1f16;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;    
 }
 
 .wrapper-boxes {    
@@ -296,22 +283,16 @@ button:hover {
 }
 
 .box-three {
-    /* outline: 10px solid yellow; */
     display: flex;
     flex: 1;
-  
-    
 }
 
 .box-four {
-    /* outline: 5px solid greenyellow; */
     display: flex; 
     flex: 3;
-    
 }
 
 .box-five {
-    outline: 2px solid blue;
     display: flex;
     flex-direction: column;
     flex: 3; 
@@ -319,14 +300,12 @@ button:hover {
 }
 
 .box-six {
-    /* outline: 3px solid red; */
     display: flex;
     flex-direction: column;
-   flex:1;
+    flex:1;
 }
 
 .box-seven {
-    /* outline: 10px solid red; */
     display: flex;
     flex: 1;
 
@@ -335,39 +314,38 @@ button:hover {
 .box-eight {
     display: flex;
     flex: 1;
-   
 }
+
 div[class^="boss-"] {
     background-size: cover;
     display: flex;    
     justify-content: center;
-    align-items: center;
     flex: 1;
 }    
 
-.boss-one {    
-    background-image: url(img/kazzara.png);
-    background-position: center;    
-}
-
-.boss-two {    
-    background-image: url(img/amalgamation1.jpg);
+.boss-one, .boss-two, .boss-five, .boss-seven, .boss-nine {
     background-position: center;
 }
+.boss-one {
+    background-image: url(img/kazzara.png);       
+}
 
-.boss-three {    
+.boss-two {
+    background-image: url(img/amalgamation1.jpg);
+}
+
+.boss-three {
     background-image: url(img/experiments.png);
     background-position-y: 10%;
 }
 
-.boss-four {    
+.boss-four {
     background-image: url(img/zaqali.png);
     background-position-y: 15%;    
 }
 
 .boss-five {
-    background-image: url(img/rashok.jpg);
-    background-position: center;
+    background-image: url(img/rashok.jpg);    
 }
 
 .boss-six {
@@ -376,8 +354,7 @@ div[class^="boss-"] {
 }
 
 .boss-seven {
-    background-image: url(img/magmorax.jpg);
-    background-position: center;
+    background-image: url(img/magmorax.jpg);    
 }
 
 .boss-eight {
@@ -387,18 +364,17 @@ div[class^="boss-"] {
 }
 
 .boss-nine {
-    background-image: url(img/sarkareth.jpg);    
-    background-position: center;
-    
+    background-image: url(img/sarkareth.jpg);   
 }
 
-.link-boss {      
+.link-boss {   
+    display: flex;   
     text-decoration: none;
     color: gray;
-    text-align: center;
 }
 
 div[class^="boss-"]:hover {
+    
     transform: scale(1.1);
     transition: .2s all ease-in-out;
 }
@@ -406,30 +382,26 @@ div[class^="boss-"]:hover {
 /* Quote */
 
 .container-quote-section {
-    align-items: center; 
     background-color: transparent;
-    border-bottom: 2px solid #859084; 
-    display: flex;
+    border-bottom: 2px solid #859084;
     flex-direction: column; 
-    justify-content: center;  
     position: relative;
 }
 
-.container-video {
-    height: 100%;
+.wrapper-video { 
+    height: 100%;   
     object-fit: cover;
-    position: absolute;
+    position: absolute;    
     width: 100%;
     z-index: -1;  
 }
 
-.container-quote {
+.wrapper-quote {
     background-color: rgba(3, 2, 3,0.85);
     border-radius: 25px;
-    color: #c1bba8;     
+    color: #c1bba8;    
     margin: 5.5em;    
     padding: 1.5em;
-    text-align: center;    
 }
 
 /* Resources */
@@ -438,8 +410,7 @@ div[class^="boss-"]:hover {
     background-color: #222525;
     padding: 1.5em;
 }
-.container-resources {   
-    display: flex;
+.container-resources {
     flex-direction: column;
 }
 
@@ -453,7 +424,7 @@ div[class^="block-"] {
     display: flex;
 }
 
-.block-one {
+.block-one, .block-three {
     flex: 1 ;
 }
 
@@ -461,15 +432,12 @@ div[class^="block-"] {
     flex: 3;
 }
 
-.block-three {
-    flex: 1;
-}
-
 div[class^="resource-"] { 
     align-items: center;
     background-size: cover;    
     border-radius: 25px;
     display: flex;         
+    flex: 1;
     filter: grayscale(45%);   
     justify-content: center;
     margin: 1%;
@@ -478,46 +446,39 @@ div[class^="resource-"] {
 }
 
 .resource-one {    
-    background-image: url(/img/alex.jpg);  
-    flex: 1;
+    background-image: url(/img/alex.jpg);
+    
 }
 
 .resource-two {    
     background-image: url(/img/route.jpg);      
-    background-position: 5%;
-    flex: 1;    
+    background-position: 5%;    
 }
 
-.resource-three {    
+div .resource-three {    
     background-image: url(/img/raiderio.jpg);
     flex: 2;
     background-position: center 20% ;    
 }
 
 .resource-four {    
-    background-image: url(/img/yt_tw.jpg);
-    flex: 1;   
+    background-image: url(/img/yt_tw.jpg);    
 }
 
 .resource-five {    
-    background-image: url(/img/logs.jpg);  
-    flex: 1;    
+    background-image: url(/img/logs.jpg);        
  }
 
  .resource-six {    
     background-image: url(/img/sources.jpg);   
-    flex: 1;
  } 
 
  .resource-title {    
     background-color: rgba(3, 2, 3,0.5); 
-    border-radius: 25px;
-    color: #c1bba8;     
+    border-radius: 25px;         
     font-size: 2.5vw;
     font-weight: 250;
-    padding: 2%;
-    text-transform: uppercase;     
-    text-align: center;           
+    padding: 2%;       
 }       
 
  div[class^="resource-"]:hover {
@@ -540,17 +501,12 @@ div[class^="resource-"] {
 }
 
 .title-resources-section {
-    align-items: center;
-    color: #c1bba8;;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;       
-    justify-content: center;
     padding: 1.5em ;
-    text-transform: uppercase;    
-    text-align: center;    
 }
 
 
 /* Create footer - rezise video to be less than 50mb without losing quality - 
-- fix syntax of figcaption - add section botton to go up and down - add navigation menu for phone*/
+- add section botton to go up and down - add navigation menu for phone*/
