@@ -1,71 +1,78 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
     cursor: url(/cursor/auto.webp) , auto;    
     font-family: Ubuntu, 'Open Sans', sans-serif;
     margin: 0;
-    padding: 0;      
+    padding: 0      
 }
 
 a, button {
-    cursor: url(cursor/link.webp), pointer;
+    cursor: url(cursor/link.webp), pointer
 }
 
 .home {
-    cursor: url(cursor/home.webp), pointer;
+    cursor: url(cursor/home.webp), pointer
 }
 
 /* Grouping selectors */
 
 h2,h1,figcaption {
-    font-weight: 350;
+    font-weight: 350
 }
 
 h3 {
-    font-weight: 400;
+    font-weight: 400
 }
 
-.title, div[class^="title-"], .list-item, .resource-title {
-    text-transform: uppercase;
+.title, div[class^=title-], .list-item, .resource-title, .title-raid {
     color: #c1bba8;
+    text-transform: uppercase    
 }
 
-.header, div[class^="container-"] {
+.header, div[class^=container-] {
     border-bottom: 2px solid #859084;
-    display: flex;
+    display: flex
 }
 
 .header, .container-description, .description, .tank-imgs, .title-guides, .link-class, .container-plus, .dungeon-imgs, 
 .container-raid, .container-quote-section, .title-resources-section, .link-boss {
-    align-items: center;
+    align-items: center
 }
 
 .container-description, .description, .tank-class, .title-guides, .container-plus, .container-raid, .link-boss, 
 .container-quote-section, .title-resources-section{
-    justify-content: center;    
+    justify-content: center    
 }
 
 .description, .wrapper-quote, .resource-title, .title-resources-section {
-    text-align: center;   
+    text-align: center   
 }
+
+.title-raid, .title-plus, .title-resources-section {
+    text-align: center;
+    margin-top: 1em   
+}
+
+
 
 /* Nav */
 
 .header {
-    background-color: #030203;
+    background: #030203;
     justify-content: space-between;     
-    padding: 0.5em 2.5em;   
-}
+    padding: .5em 2.5em
+    }
 
 .logo-img {                   
-    border: 2px solid #859084;   
+    outline: 2px solid #859084;   
     border-radius: 50%;
     min-width: 35px; 
-    width: 5%;            
+    width: 5%      
 }
 
 .links {           
@@ -73,16 +80,16 @@ h3 {
     flex-wrap:wrap;
     gap: 2em;
     list-style: none;       
-    padding: 0;
+    padding: 0
 }
 
 .list-item {   
-    text-decoration: none;               
+    text-decoration: none
 }
 
 .list-item:hover {
     font-weight: 500;
-    text-decoration: underline;
+    text-decoration: underline
 }
 
 /* Description */
@@ -92,38 +99,38 @@ h3 {
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;    
-   flex-wrap: wrap;  
+   flex-wrap: wrap
 } 
 
-.description {
-   background-color: rgba(3, 2, 3,0.85);
+.description {   
+   background:#030203d9;
    border-radius: 25px;
    color: #c1bba8;
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
-   margin: 3em 5em 3em 5em;
-   padding: 2% 4%;
+   margin: 3em 5em;
+   padding: 2% 4%
 }
 
 button {
-    background-color: #b5bbb4;
+    background: #b5bbb4;
     border-radius: 25px;
     color: #030203;
     margin-bottom: 1em;
     margin-top: 1em;
     padding: 2% 4%;
-    width: 40%;   
+    width: 40%
 }
 
 button:hover {
-    filter:brightness(120%)
+    filter:brightness(1.2)
 }
 
 /* Guides */
 
 .container-guides {
-    background-color: #030203;
+    background: #030203
 }
 
 .tank-imgs {
@@ -132,260 +139,214 @@ button:hover {
     flex-wrap:wrap;
     gap: 2em;
     justify-content:space-evenly;
-    margin: 2em 3em;       
+    margin: 2em 3em
 }
 
 .tank-class {
     border-radius: 100px;
-    width: 100px;    
+    width: 100px
 }
 
 .title-guides {
     display: flex;
     flex: 1;
-    padding: 1em 2em 0 2em;     
+    padding: 1em 2em 0
 }
 
 .link-class {
     display: flex;
     flex-wrap: wrap; 
-    justify-content:center;
+    justify-content:center
 }
 
 .link-class:hover {
-    filter:contrast(200%); 
+    filter:contrast(2); 
     transform: scale(1.2); 
-    transition: 0.3s all ease-in-out;
+    transition: .3s all ease-in-out
 }
-
-/* Changes from row to column */
-@media (max-width: 600px) {
-    .container-guides {      
-        align-items: center;
-        flex-direction: column-reverse;
-        justify-content: space-evenly;        
-    }
-  }
   
   /* Mythic Plus */
 
-  .container-plus {
-    background-color: #222525;
-    flex-direction: column-reverse;    
-    padding: 1em 0.5em;  
-    width: 100%;
-  }
+.container-plus {    
+    background: #222525;
+    flex-direction: column-reverse  
+}
 
-  .dungeon-imgs {
+.wrapper-imgs {
     display: flex;
     flex: 3;
     flex-wrap: wrap;
     gap: 3em;
     justify-content: space-evenly;
-    margin: 2em;        
-  }
+    margin: .5em 2em 3em   
+}
 
-  .dungeon {
-    border: 1px solid #859084;
+.dungeon {
+    outline: 1px solid #859084;
     border-radius: 25px;
     height: 125px;
     padding: 0;
-    width: 250px;
-  }
+    width: 250px
+}
 
 .dungeon:hover {
     filter: grayscale(60%);
-    transition: 0.3s all ease-in-out;
+    transition: .3s all ease-in-out
 }
 
-.image-wrap {        
+.image-wrap {       
     border-radius: 25px;
     height: 125px;
-    position: relative;
-    width:250px;
+    position: relative;    
+    width: 250px
 }
 
 .text-hover {      
     color: #b5bbb4;
-    filter: brightness(120%);
+    filter: brightness(1.2);
     font-size: larger; 
     font-weight: 800;
     margin: 0;
     position: absolute;
-    transition: 0.8ms all ease-in-out; 
+    transition: .8ms all ease-in-out; 
     top: 40%;
     visibility: hidden;
-    -webkit-text-stroke: 1px #030203;
+    -webkit-text-stroke: 1px #030203
 }
 
-.bh {    
-    left: 14%;
-}
+.bh { left: 14% }
 
-.fh {    
-    left: 35%;
-}
+.fh { left: 35% }
 
-.hoi {
-    left: 20%;
-}
+.hoi { left: 20% }
 
-.nl {
-    left: 19%;
-}
+.nl { left: 19% }
 
-.nel {
-    left: 33%;
-}
+.nel { left: 33% }
 
-.uld {
-    left: 8%;
-}
+.uld { left: 8% }
 
-.ur {
-    left: 25.5%;
-}
+.ur {left: 25.5% }
 
-.vp {
-    left: 12.5%;
-}
+.vp { left: 12.5% }
 
 .image-wrap:hover .text-hover {
     opacity: 1;
-    visibility: visible;
+    visibility: visible
 }
 
 /* Raid */
 
 .container-raid {
-    background-color:#1f1f16;
-    flex-direction: column;
+    background:#1f1f16;
+    flex-direction: column   
 }
 
-.wrapper-boxes {    
-    display: flex; 
-    margin: 2em;
+.wrapper-boxes, div[class^=box-] {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: .5em;   
+    justify-content: space-evenly
+}
+
+.wrapper-boxes {
+    flex: 1;
     height: 500px;
-    width: 90%;  
-}
-.box-one {
-    outline: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    flex: 1;           
+    margin: 1em;
+    padding-bottom: 2em;
+    width: 90%
 }
 
-.box-two {
-    outline: 1px solid rebeccapurple;
-    display: flex;
-    flex-direction: column;   
-    flex: 3;  
+.box-one, .box-two, .box-five, .box-six {
+    flex-direction: column
 }
 
-.box-three {
-    display: flex;
-    flex: 1;
+.box-one, .box-three, .box-six, .box-seven, .box-eight {
+    flex: 1
 }
 
-.box-four {
-    display: flex; 
-    flex: 3;
+.box-two, .box-four, .box-five {
+    flex: 3  
 }
 
-.box-five {
-    display: flex;
-    flex-direction: column;
-    flex: 3; 
-    align-items: stretch;  
-}
-
-.box-six {
-    display: flex;
-    flex-direction: column;
-    flex:1;
-}
-
-.box-seven {
+div[class^=boss-] {
+    background-size: cover;   
     display: flex;
     flex: 1;
-
-}
-
-.box-eight {
-    display: flex;
-    flex: 1;
-}
-
-div[class^="boss-"] {
-    background-size: cover;
-    display: flex;    
-    justify-content: center;
-    flex: 1;
+    justify-content: center;    
+    outline: 1px solid #859084
 }    
 
 .boss-one, .boss-two, .boss-five, .boss-seven, .boss-nine {
-    background-position: center;
+    background-position: center
 }
 .boss-one {
-    background-image: url(img/kazzara.png);       
+    background-image: url(img/kazzara.jpg); 
+    background-position: center     
 }
 
 .boss-two {
-    background-image: url(img/amalgamation1.jpg);
+    background-image: url(img/amalgamation.jpg)
 }
 
 .boss-three {
     background-image: url(img/experiments.png);
-    background-position-y: 10%;
+    background-position-y: 10%
 }
 
 .boss-four {
     background-image: url(img/zaqali.png);
-    background-position-y: 15%;    
+    background-position-y: 15%    
 }
 
 .boss-five {
-    background-image: url(img/rashok.jpg);    
+    background-image: url(img/rashok.jpg)    
 }
 
 .boss-six {
     background-image: url(img/zskarn.jpg);
-    background-position-y: 10%;    
+    background-position-y: 10%    
 }
 
 .boss-seven {
-    background-image: url(img/magmorax.jpg);    
+    background-image: url(img/magmorax.jpg)    
 }
 
 .boss-eight {
     background-image: url(img/echo.jpg);
-    background-position-y: 15%;
-   
+    background-position-y: 15%   
 }
 
 .boss-nine {
-    background-image: url(img/sarkareth.jpg);   
+    background-image: url(img/sarkareth.jpg)   
 }
 
-.link-boss {   
-    display: flex;   
-    text-decoration: none;
-    color: gray;
+.link-boss {
+    display: flex;      
+    font-weight: 250;
+    text-align: center;
+    text-decoration: none       
 }
 
-div[class^="boss-"]:hover {
-    
-    transform: scale(1.1);
+.boss-name {
+    background:#030203a9;
+    border-radius: 25px;
+    color: #c1bba8;
+    margin: 1em;
+    padding:.7em
+}
+
+div[class^=boss-]:hover {    
     transition: .2s all ease-in-out;
+    transform: scale(1.1)    
 }
 
 /* Quote */
 
-.container-quote-section {
-    background-color: transparent;
+.container-quote-section {    
     border-bottom: 2px solid #859084;
     flex-direction: column; 
-    position: relative;
+    position: relative
 }
 
 .wrapper-video { 
@@ -393,46 +354,46 @@ div[class^="boss-"]:hover {
     object-fit: cover;
     position: absolute;    
     width: 100%;
-    z-index: -1;  
+    z-index: -1  
 }
 
 .wrapper-quote {
-    background-color: rgba(3, 2, 3,0.85);
+    background:#030203d9;
     border-radius: 25px;
     color: #c1bba8;    
     margin: 5.5em;    
-    padding: 1.5em;
+    padding: 1.5em
 }
 
 /* Resources */
 
 .resources-section {
-    background-color: #222525;
-    padding: 1.5em;
+    background: #222525   
 }
+
 .container-resources {
-    flex-direction: column;
+    flex-direction: column    
 }
 
 .wrapper-resources {
     display: flex;    
-    flex-direction: column;
-    height: 750px;
+    flex-direction: column;    
+    margin: 1em
 }
 
-div[class^="block-"] {
-    display: flex;
+div[class^=block-] {
+    display: flex
 }
 
 .block-one, .block-three {
-    flex: 1 ;
+    flex: 1 
 }
 
 .block-two {
-    flex: 3;
+    flex: 3
 }
 
-div[class^="resource-"] { 
+div[class^=resource-] { 
     align-items: center;
     background-size: cover;    
     border-radius: 25px;
@@ -442,71 +403,88 @@ div[class^="resource-"] {
     justify-content: center;
     margin: 1%;
     outline: 2px solid #030203; 
-    padding: 1em; 
+    padding: 1em 
 }
 
 .resource-one {    
-    background-image: url(/img/alex.jpg);
+    background-image: url(/img/alex.jpg)
     
 }
 
 .resource-two {    
     background-image: url(/img/route.jpg);      
-    background-position: 5%;    
+    background-position: 5%    
 }
 
 div .resource-three {    
     background-image: url(/img/raiderio.jpg);
-    flex: 2;
-    background-position: center 20% ;    
+    background-position: center 20%;
+    flex: 2       
 }
 
 .resource-four {    
-    background-image: url(/img/yt_tw.jpg);    
+    background-image: url(/img/yt_tw.jpg)    
 }
 
 .resource-five {    
-    background-image: url(/img/logs.jpg);        
+    background-image: url(/img/logs.jpg)        
  }
 
  .resource-six {    
-    background-image: url(/img/sources.jpg);   
+    background-image: url(/img/sources.jpg)   
  } 
 
- .resource-title {    
-    background-color: rgba(3, 2, 3,0.5); 
+ .resource-title {  
+    background: #03020380;  
     border-radius: 25px;         
-    font-size: 2.5vw;
-    font-weight: 250;
+    font-size: 2.5vw;    
+    font-weight: lighter;
     padding: 2%;       
+    -webkit-text-stroke: 1px #030203
 }       
 
- div[class^="resource-"]:hover {
-    filter: none;
+ div[class^=resource-]:hover {
+    filter: none
  }
-
- @media (max-width: 600px) {
-
-    .wrapper-resources {
-        height: 600px;
-    }
-    div[class^="block-"] {
-        flex-direction: column;
-        flex: 1;
-    }
-
-    .resource-title {
-        font-size: 3vw;
-    }
-}
 
 .title-resources-section {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;       
-    padding: 1.5em ;
+    flex-wrap: wrap 
 }
 
+/* Responsiveness */
 
-/* Create footer - rezise video to be less than 50mb without losing quality - 
-- add section botton to go up and down - add navigation menu for phone*/
+@media (max-width: 600px) {
+    .description { 
+        margin: 1em;       
+    }
+
+    .container-guides {      
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: space-evenly
+    }
+
+    div[class^=box-] {  
+        flex-direction: column;               
+    }
+
+    .boss-nine { background-position-y: 10% }
+
+    .boss-seven { background-position-y: 25% }
+
+    .boss-six { background-position-y: 15% }
+
+    div[class^=block-] {
+        flex-direction: column;
+        flex: 1
+    }
+
+    .resource-title {
+        font-weight: bolder
+    }    
+}
+
+/* group more selectors - create footer - rezise video to be less than 50mb without losing quality - 
+- add section button to go up and down - add navigation menu for phone*/
