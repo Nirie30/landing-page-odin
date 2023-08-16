@@ -3,16 +3,15 @@
 *::after {
     box-sizing: border-box
 }
-/* 
+
 html {
-    scroll-behavior: smooth;
-  } */
+    scroll-behavior: smooth;    
+  }
 
 body {
     cursor: url(/cursor/auto.webp) , auto;    
     font-family: Ubuntu, 'Open Sans', sans-serif;
     margin: 0;
-    padding: 0      
 }
 
 a, button {
@@ -20,7 +19,12 @@ a, button {
 }
 
 .home {
-    cursor: url(cursor/home.webp), pointer
+    cursor: url(cursor/home.webp), pointer;
+    padding-right: 2em;   
+}
+
+section {
+    scroll-margin-top: 4rem;
 }
 
 /* Grouping selectors */
@@ -33,8 +37,13 @@ h3 {
     font-weight: 400
 }
 
-.title, div[class^=title-], .list-item, .resource-title, .title-raid {
+.title, div[class^=title-], .list-item, .title-raid, .description, .boss-name,
+.wrapper-quote, .top-logo, .link-resource {
     color: #c1bba8;
+}
+
+
+.title, div[class^=title-], .list-item, .title-raid {    
     text-transform: uppercase    
 }
 
@@ -53,7 +62,7 @@ h3 {
     justify-content: center    
 }
 
-.description, .wrapper-quote, .resource-title, .title-resources-section {
+.description, .wrapper-quote, .link-resource, .title-resources-section {
     text-align: center   
 }
 
@@ -62,30 +71,45 @@ h3 {
     margin-top: 1em   
 }
 
+
+.description, button, .dungeon, .image-wrap, .boss-name,.link-resource, div[class^=resource-],
+.wrapper-quote {
+    border-radius: 25px;
+}
+
 /* Nav */
+
+header {
+    position: sticky;
+    top: 0;    
+    z-index: 1;   
+}
 
 .header {
     background: #030203;
     justify-content: space-between;     
-    padding: .5em 2.5em
+    padding: .5em 2.5em;   
     }
 
-.logo-img {                   
+.logo-img {                  
     outline: 2px solid #859084;   
     border-radius: 50%;
-    min-width: 35px; 
-    width: 5%      
+    flex: 1;
+    min-width: 35px;  
+    width: 0;     
 }
 
-.links {           
-    display: flex;   
+.links {
+    display: flex;
     flex-wrap:wrap;
+    flex: 3;
     gap: 2em;
+    justify-content: space-evenly;
     list-style: none;       
-    padding: 0
+    padding: 0;
 }
 
-.list-item {   
+.list-item, .link-resource {  
     text-decoration: none
 }
 
@@ -93,6 +117,7 @@ h3 {
     font-weight: 500;
     text-decoration: underline
 }
+
 
 /* Description */
 
@@ -106,8 +131,6 @@ h3 {
 
 .description {   
    background:#030203d9;
-   border-radius: 25px;
-   color: #c1bba8;
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
@@ -117,7 +140,6 @@ h3 {
 
 button {
     background: #b5bbb4;
-    border-radius: 25px;
     color: #030203;
     margin-bottom: 1em;
     margin-top: 1em;
@@ -146,7 +168,7 @@ button:hover {
 }
 
 .tank-class {
-    border-radius: 100px;
+    border-radius: 50%;
     width: 100px
 }
 
@@ -173,21 +195,21 @@ button:hover {
 
 .container-plus {    
     background: #222525;
-    flex-direction: column-reverse  
+    flex-direction: column-reverse;    
 }
 
 .wrapper-imgs {
     display: flex;
     flex: 3;
     flex-wrap: wrap;
-    gap: 3em;
+    gap: 2em 5em;
     justify-content: space-evenly;
-    margin: .5em 2em 3em   
+    margin: 1.5em 2em 3em;  
+    width: 80%; 
 }
 
 .dungeon {
     outline: 1px solid #859084;
-    border-radius: 25px;
     height: 125px;
     padding: 0;
     width: 250px
@@ -198,8 +220,7 @@ button:hover {
     transition: .3s all ease-in-out
 }
 
-.image-wrap {       
-    border-radius: 25px;
+.image-wrap {
     height: 125px;
     position: relative;    
     width: 250px
@@ -334,9 +355,7 @@ div[class^=boss-] {
 }
 
 .boss-name {
-    background:#030203a9;
-    border-radius: 25px;
-    color: #c1bba8;
+    background:#030203a9; 
     margin: 1em;
     padding:.7em
 }
@@ -364,8 +383,6 @@ div[class^=boss-]:hover {
 
 .wrapper-quote {
     background:#030203d9;
-    border-radius: 25px;
-    color: #c1bba8;    
     margin: 5.5em;    
     padding: 1.5em
 }
@@ -397,19 +414,19 @@ div[class^=block-] {
 
 div[class^=resource-] { 
     align-items: center;
-    background-size: cover;    
-    border-radius: 25px;
+    background-size: cover;
     display: flex;         
     flex: 1;
     filter: grayscale(45%);   
     justify-content: center;
     margin: 1%;
     outline: 2px solid #030203; 
-    padding: 1em 
+    padding: 2em 
 }
 
 .resource-one {    
-    background-image: url(/img/alex.jpg)
+    background-image: url(/img/alex.jpg);
+    background-position-y: 5%;
     
 }
 
@@ -436,14 +453,14 @@ div .resource-three {
     background-image: url(/img/sources.jpg)   
  } 
 
- .resource-title {  
-    background: #03020380;  
-    border-radius: 25px;         
-    font-size: 2.5vw;    
+.link-resource {
+    background: #03020380;
+    display: block;    
+    font-size: 2vw;    
     font-weight: lighter;
-    padding: 2%;       
-    -webkit-text-stroke: 1px #030203
-}       
+    padding: 3%;       
+    -webkit-text-stroke: 1.5px #030203
+}
 
  div[class^=resource-]:hover {
     filter: none
@@ -455,11 +472,57 @@ div .resource-three {
     flex-wrap: wrap 
 }
 
+/* Footer */
+
+footer {
+    background: #030203;
+    padding: 1em 1em 0
+}
+
+footer > p {
+    color: #b5bbb4;
+    font-weight: 500; 
+    margin: 0;
+    padding: 0.2em;
+    text-align: center
+}
+
+footer > p:nth-child(2) {
+    font-size: 12px
+}
+
+.top-logo {
+    align-items: center;
+    display: flex;    
+    flex-wrap: wrap;
+    gap: .3em;
+    justify-content: center;       
+}
+
+.top-img {
+    height: 2%;    
+    min-width: 25px;
+    width: 2%
+}
+
 /* Responsiveness */
 
-@media (max-width: 600px) {
+@media (max-width: 600px) {    
+    .header {        
+        padding: 0 1em;
+
+    }
+
+    .links {
+        gap: 1em
+    }
+
+    section {
+        scroll-margin-top: 3.5rem
+    }
+
     .description { 
-        margin: 1em;       
+        margin: 1em       
     }
 
     .container-guides {      
@@ -469,7 +532,7 @@ div .resource-three {
     }
 
     div[class^=box-] {  
-        flex-direction: column;               
+        flex-direction: column               
     }
 
     .boss-nine { background-position-y: 10% }
@@ -479,63 +542,14 @@ div .resource-three {
     .boss-six { background-position-y: 15% }
 
     div[class^=block-] {
-        flex-direction: column;
-        flex: 1
+        flex: 1;
+        flex-direction: column        
     }
 
-    .resource-title {
+    .link-resource {
+        font-size: 3vw;
         font-weight: bolder
     }    
 }
 
-footer {
-    background: #030203;
-    padding: 1em 1em 0
-}
-
-footer > p {
-    color: #b5bbb4;
-    font-weight: 500;
-    margin: 0;
-    padding: .2em;
-    text-align: center;
-}
-
-footer > p:nth-child(2) {
-    font-size: 12px;
-}
-
-.top-logo {
-    align-items: center;    
-    color: #c1bba8;
-    display: flex;    
-    flex-wrap: wrap;
-    justify-content: center;   
-}
-
-.top-img {
-    height: 2%;
-    width: 2%;
-}
-
-/* Arrows */
-
-.arrow-link {    
-}
-
-.arrow {
-    display: inline;
-    border: solid #b5bbb4;
-    border-width: 0 5px 5px 0;  
-    right: 0;
-    margin-right: 1.2em;
-    padding: 5px;  
-    position: absolute;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-}
-
-
-
-/* group more selectors - create footer - rezise video to be less than 50mb without losing quality - 
-- add section button to go up and down - add navigation menu for phone*/
+/*Add credit links and publish as public in github*/
