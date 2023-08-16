@@ -204,8 +204,7 @@ button:hover {
     flex-wrap: wrap;
     gap: 2em 5em;
     justify-content: space-evenly;
-    margin: 1.5em 2em 3em;  
-    width: 80%; 
+    margin: 1.5em 3em 3em;
 }
 
 .dungeon {
