@@ -47,7 +47,7 @@ h3 {
     text-transform: uppercase    
 }
 
-.header, div[class^=container-] {
+.header, div[class^=container-], .section-sources {
     border-bottom: 2px solid #859084;
     display: flex
 }
@@ -263,7 +263,9 @@ button:hover {
 
 .container-raid {
     background:#1f1f16;
-    flex-direction: column   
+    flex-direction: column;
+       
+
 }
 
 .wrapper-boxes, div[class^=box-] {
@@ -271,7 +273,9 @@ button:hover {
     flex-wrap: wrap; 
     filter: grayscale(10%);
     gap: .5em;   
-    justify-content: space-evenly
+    justify-content: space-evenly;
+   
+    
 }
 
 .wrapper-boxes {
@@ -279,11 +283,12 @@ button:hover {
     height: 500px;
     margin: 1em;
     padding-bottom: 2em;
-    width: 90%
+    width: 90%;    
 }
 
 .box-one, .box-two, .box-five, .box-six {
-    flex-direction: column
+    flex-direction: column;
+   
 }
 
 .box-one, .box-three, .box-six, .box-seven, .box-eight {
@@ -299,7 +304,7 @@ div[class^=boss-] {
     display: flex;
     flex: 1;
     justify-content: center;    
-    outline: 1px solid #859084
+    outline: 1px solid #859084;    
 }    
 
 .boss-one, .boss-two, .boss-five, .boss-seven, .boss-nine {
@@ -307,7 +312,7 @@ div[class^=boss-] {
 }
 .boss-one {
     background-image: url(img/kazzara.jpg); 
-    background-position: center     
+    background-position: center;    
 }
 
 .boss-two {
@@ -361,7 +366,8 @@ div[class^=boss-] {
 
 div[class^=boss-]:hover {    
     transition: .2s all ease-in-out;
-    transform: scale(1.1)    
+    transform: scale(1.1);
+    z-index: 10;    
 }
 
 /* Quote */
@@ -551,4 +557,44 @@ footer > p:nth-child(2) {
     }    
 }
 
-/*Add credit links and publish as public in github*/
+/* Sources / Credits */
+
+
+.container-sources {
+    background: #030203;
+    flex-direction: column;
+}
+
+.section-sources {  
+    outline: 2px solid red;  
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+ul > li {
+    list-style: none;
+}
+
+.container-sources p {
+    color: #b5bbb4;
+}
+
+.container-sources a {
+    color: #b5bbb4;
+    text-decoration: none;
+}
+
+.container-sources h1, .container-sources h2{
+    color: #c1bba8;
+    text-align: center;
+}
+
+
+.item {   
+    flex: 1;
+    outline: 3px solid greenyellow;
+    text-align: center;
+}
+
+
+/* fix raid section hover - style credits - publish*/
