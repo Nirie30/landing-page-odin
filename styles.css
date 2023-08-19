@@ -190,7 +190,6 @@ button:hover {
     transition: .3s all ease-in-out
 }
 
-  
   /* Mythic Plus */
 
 .container-plus {    
@@ -199,19 +198,20 @@ button:hover {
 }
 
 .wrapper-imgs {
+    align-items: center;
     display: flex;
-    flex: 3;
     flex-wrap: wrap;
-    gap: 2em 5em;
+    gap: 3em;
     justify-content: space-evenly;
-    margin: 1.5em 3em 3em;
+    margin: 1.5em 4em 3em;
 }
 
 .dungeon {
+    flex: 1;
     outline: 1px solid #859084;
-    height: 125px;
+    height: 90%;
     padding: 0;
-    width: 250px
+    width: 90%;
 }
 
 .dungeon:hover {
@@ -238,21 +238,19 @@ button:hover {
     -webkit-text-stroke: 1px #030203
 }
 
-.bh { left: 14% }
+.bh { left: 9% }
 
-.fh { left: 35% }
+.fh { left: 30% }
 
-.hoi { left: 20% }
+.hoi, .nl { left: 15% }
 
-.nl { left: 19% }
+.nel { left: 28% }
 
-.nel { left: 33% }
+.uld { left: 3% }
 
-.uld { left: 8% }
+.ur {left: 22% }
 
-.ur {left: 25.5% }
-
-.vp { left: 12.5% }
+.vp { left: 8% }
 
 .image-wrap:hover .text-hover {
     opacity: 1;
@@ -262,19 +260,16 @@ button:hover {
 /* Raid */
 
 .container-raid {
-    background:#1f1f16;
-    flex-direction: column;
-       
-
-}
+    background: #1f1f16;
+    flex-direction: column; 
+}    
 
 .wrapper-boxes, div[class^=box-] {
     display: flex;
     flex-wrap: wrap; 
     filter: grayscale(10%);
-    gap: .5em;   
-    justify-content: space-evenly;
-   
+    gap: 1em;   
+    justify-content: space-evenly;  
     
 }
 
@@ -283,7 +278,7 @@ button:hover {
     height: 500px;
     margin: 1em;
     padding-bottom: 2em;
-    width: 90%;    
+    width: 90%;       
 }
 
 .box-one, .box-two, .box-five, .box-six {
@@ -304,7 +299,7 @@ div[class^=boss-] {
     display: flex;
     flex: 1;
     justify-content: center;    
-    outline: 1px solid #859084;    
+    outline: 1px solid #859084; 
 }    
 
 .boss-one, .boss-two, .boss-five, .boss-seven, .boss-nine {
@@ -312,7 +307,7 @@ div[class^=boss-] {
 }
 .boss-one {
     background-image: url(img/kazzara.jpg); 
-    background-position: center;    
+    background-position: center;   
 }
 
 .boss-two {
@@ -355,19 +350,20 @@ div[class^=boss-] {
     display: flex;      
     font-weight: 250;
     text-align: center;
-    text-decoration: none       
+    text-decoration: none;
+           
 }
 
 .boss-name {
     background:#030203a9; 
     margin: 1em;
-    padding:.7em
+    padding:.7em;
+    
 }
 
-div[class^=boss-]:hover {    
-    transition: .2s all ease-in-out;
-    transform: scale(1.1);
-    z-index: 10;    
+div[class^=boss-]:hover {     
+    transition: transform 200ms;
+    transform: translateY(-10px);    
 }
 
 /* Quote */
@@ -554,29 +550,50 @@ footer > p:nth-child(2) {
     .link-resource {
         font-size: 3vw;
         font-weight: bolder
-    }    
+    } 
+
+    div[class^=brick-], .section-sources {  
+        flex-direction: column;
+        flex: 1;               
+    }
 }
 
 /* Sources / Credits */
 
-
 .container-sources {
     background: #030203;
+    flex-direction: column;    
+}
+
+.section-sources, div[class^=brick-], .plus, .raid {  
+    display: flex;    
+}
+
+.brick-one, .brick-two, .plus, .raid {
     flex-direction: column;
 }
 
-.section-sources {  
-    outline: 2px solid red;  
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.brick-one {    
+    flex: 2;     
 }
 
-ul > li {
-    list-style: none;
+.brick-two {    
+    flex: 1;
 }
 
-.container-sources p {
-    color: #b5bbb4;
+.brick-three, .brick-four, .brick-five {    
+    justify-content: center;
+}
+
+.item ul {
+    margin: 0;
+    padding: 0 0 1em;
+}
+
+ul > li, .container-sources p {
+    color: #c1bba8;
+    font-size: large;
+    list-style: none;    
 }
 
 .container-sources a {
@@ -584,17 +601,36 @@ ul > li {
     text-decoration: none;
 }
 
-.container-sources h1, .container-sources h2{
+.title-credits, .title-item {    
     color: #c1bba8;
-    text-align: center;
+    text-align: center;  
+    text-decoration: underline;
+    text-underline-offset: .2em;
+    text-decoration-thickness: 3px;   
 }
 
+.sources-title {
+    margin-bottom: 1em;
+}
 
-.item {   
+.item {    
     flex: 1;
-    outline: 3px solid greenyellow;
-    text-align: center;
+    outline: 1px solid #c1bba8;
+    padding: 1em 2em;
+    text-align: center;    
 }
 
+.item span {
+    color: #b5bbb4;    
+}
+
+.item p {
+    color: #c1bba8; 
+    font-size: large;
+}
+
+.container-sources a:hover {
+    font-weight: 800;
+}
 
 /* fix raid section hover - style credits - publish*/
