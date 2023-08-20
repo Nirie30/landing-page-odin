@@ -9,7 +9,7 @@ html {
   }
 
 body {
-    cursor: url(/cursor/auto.webp) , auto;    
+    cursor: url(cursor/auto.webp) , auto;    
     font-family: Ubuntu, 'Open Sans', sans-serif;
     margin: 0;
 }
@@ -460,8 +460,7 @@ div .resource-three {
     display: block;    
     font-size: 2vw;    
     font-weight: lighter;
-    padding: 3%; 
-    -webkit-text-stroke: 1px #030203
+    padding: 3%;    
 }
 
  div[class^=resource-]:hover {
