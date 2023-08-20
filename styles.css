@@ -459,8 +459,7 @@ div .resource-three {
     display: block;    
     font-size: 2vw;    
     font-weight: lighter;
-    padding: 3%;       
-    -webkit-text-stroke: 1.5px #030203
+    padding: 3%; 
 }
 
  div[class^=resource-]:hover {
