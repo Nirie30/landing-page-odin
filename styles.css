@@ -456,10 +456,12 @@ div .resource-three {
 
 .link-resource {
     background: #03020380;
+    color: #c1bba8;
     display: block;    
     font-size: 2vw;    
     font-weight: lighter;
     padding: 3%; 
+    -webkit-text-stroke: 1px #030203
 }
 
  div[class^=resource-]:hover {
