@@ -122,7 +122,7 @@ header {
 /* Description */
 
 .container-description {    
-   background-image: url(/img/background_description.jpg);  
+   background-image: url(img/background_description.jpg);  
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;    
@@ -426,32 +426,32 @@ div[class^=resource-] {
 }
 
 .resource-one {    
-    background-image: url(/img/alex.jpg);
+    background-image: url(img/alex.jpg);
     background-position-y: 5%;
     
 }
 
 .resource-two {    
-    background-image: url(/img/route.jpg);      
+    background-image: url(img/route.jpg);      
     background-position: 5%    
 }
 
 div .resource-three {    
-    background-image: url(/img/raiderio.jpg);
+    background-image: url(img/raiderio.jpg);
     background-position: center 20%;
     flex: 2       
 }
 
 .resource-four {    
-    background-image: url(/img/yt_tw.jpg)    
+    background-image: url(img/yt_tw.jpg)    
 }
 
 .resource-five {    
-    background-image: url(/img/logs.jpg)        
+    background-image: url(img/logs.jpg)        
  }
 
  .resource-six {    
-    background-image: url(/img/sources.jpg)   
+    background-image: url(img/sources.jpg)   
  } 
 
 .link-resource {
